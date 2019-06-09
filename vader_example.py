@@ -2,7 +2,7 @@ import nltk
 
 from nltk.sentiment import vader
 
-if __name__ == "__main__":
+def vader_example():
     sia = vader.SentimentIntensityAnalyzer()
     phrase = 'What a terrible restaurant'
     polarity_scores = sia.polarity_scores(phrase)
@@ -51,3 +51,7 @@ if __name__ == "__main__":
     phrase9 = 'I usually hate seafood but I liked this'
     polarity_scores = sia.polarity_scores(phrase9)
     print('For the phrase:\n - {} \nVader generates the following results: {}'.format(phrase9, polarity_scores))
+
+
+if __name__ == "__main__":
+    vader_example()
